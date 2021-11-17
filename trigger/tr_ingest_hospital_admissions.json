@@ -1,0 +1,17 @@
+{
+	"name": "tr_ingest_hospital_admissions",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2021-10-28T18:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

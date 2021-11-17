@@ -1,0 +1,16 @@
+{
+	"name": "ls_sql_covid_report",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=souro-covid-server.database.windows.net;initial catalog=covid-db;user id=souro",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDlDQjdCMERBLTk3RTMtNDMzMC05NkQ1LUVDRTBERUJFOUVCQV83MjNkNTExMi02MzVjLTQ5NTQtYjI1ZS1lMzAyMTkxMjZkNGYiDQp9"
+		},
+		"connectVia": {
+			"referenceName": "ir-covid-reporting-souro",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

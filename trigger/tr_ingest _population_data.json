@@ -1,0 +1,24 @@
+{
+	"name": "tr_ingest _population_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_control_flow_activities_scenario_2",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/population/blobs/population_by_age.tsv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ab1404b6-a8b4-4e1c-b264-562f1f2c663f/resourceGroups/df_covid_reporting_rg/providers/Microsoft.Storage/storageAccounts/covidreportingsabysouro",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

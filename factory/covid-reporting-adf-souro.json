@@ -1,0 +1,9 @@
+{
+	"name": "covid-reporting-adf-souro",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f2e3e538-f562-4784-8179-b4efdf62e46b",
+		"tenantId": "513294a0-3e20-41b2-a970-6d30bf1546fa"
+	}
+}

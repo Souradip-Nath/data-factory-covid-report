@@ -1,0 +1,46 @@
+{
+	"name": "pl_master_population",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy raw data",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_control_flow_activities_scenario_2",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "process data",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "copy raw data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_processed_population",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "master"
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-11-15T13:00:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
